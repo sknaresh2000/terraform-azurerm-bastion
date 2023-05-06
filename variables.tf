@@ -56,11 +56,6 @@ variable "nsg_name" {
   type        = string
 }
 
-variable "bastion_subnet_id" {
-  description = "id of the subnet to deploy AzureBastion"
-  type        = string
-}
-
 variable "copy_paste_enabled" {
   description = "Is Copy/Paste feature enabled for the Bastion Host. Defaults to true"
   type        = string
