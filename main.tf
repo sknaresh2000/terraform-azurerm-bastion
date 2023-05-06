@@ -17,7 +17,7 @@ resource "azurerm_public_ip" "bastion-pip" {
 }
 
 resource "azurerm_bastion_host" "bastion" {
-  name                = var.name
+  name                = var.bastion_name
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = var.bastion_sku
@@ -30,7 +30,7 @@ resource "azurerm_bastion_host" "bastion" {
 
   ip_configuration {
     name                 = var.ip_config_name
-    subnet_id            = var.bastion_subnet_id
+    subnet_id            = azurerm_subnet.bastion-subnet.id
     public_ip_address_id = azurerm_public_ip.bastion-pip.id
   }
 }
@@ -67,7 +67,7 @@ resource "azurerm_subnet_network_security_group_association" "nsg-association" {
   depends_on = [
     azurerm_network_security_rule.nsg-rule
   ]
-  subnet_id                 = var.bastion_subnet_id
+  subnet_id                 = azurerm_subnet.bastion-subnet.id
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
 

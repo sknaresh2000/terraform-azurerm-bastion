@@ -28,6 +28,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_allocation_method"></a> [allocation\_method](#input\_allocation\_method) | Allocation method of IP address | `string` | `"Static"` | no |
+| <a name="input_bastion_name"></a> [bastion\_name](#input\_bastion\_name) | Name of Azure Bastion | `string` | n/a | yes |
 | <a name="input_bastion_sku"></a> [bastion\_sku](#input\_bastion\_sku) | The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic | `string` | `"Basic"` | no |
 | <a name="input_bastion_subnet_id"></a> [bastion\_subnet\_id](#input\_bastion\_subnet\_id) | id of the subnet to deploy AzureBastion | `string` | n/a | yes |
 | <a name="input_copy_paste_enabled"></a> [copy\_paste\_enabled](#input\_copy\_paste\_enabled) | Is Copy/Paste feature enabled for the Bastion Host. Defaults to true | `string` | `true` | no |
@@ -35,7 +36,6 @@ No modules.
 | <a name="input_ip_config_name"></a> [ip\_config\_name](#input\_ip\_config\_name) | Name of IP Configuration | `string` | n/a | yes |
 | <a name="input_ip_connect_enabled"></a> [ip\_connect\_enabled](#input\_ip\_connect\_enabled) | Is IP Connect feature enabled for the Bastion Host. Defaults to false | `string` | `false` | no |
 | <a name="input_location"></a> [location](#input\_location) | Location where Azure Bastion will be deployed | `string` | `"eastus"` | no |
-| <a name="input_name"></a> [name](#input\_name) | Name of Azure Bastion | `string` | n/a | yes |
 | <a name="input_nsg_name"></a> [nsg\_name](#input\_nsg\_name) | Name of Network Security Group | `string` | n/a | yes |
 | <a name="input_pip_name"></a> [pip\_name](#input\_pip\_name) | Name of IP | `string` | n/a | yes |
 | <a name="input_pip_zones"></a> [pip\_zones](#input\_pip\_zones) | A collection containing the availability zone to allocate the Public IP in. | `list` | `[]` | no |

@@ -4,6 +4,12 @@ variable "location" {
   default     = "eastus"
 }
 
+variable "bastion_name" {
+  type        = string
+  description = "Name of Azure Bastion"
+  default     = "bastion"
+}
+
 variable "resource_group_name" {
   type        = string
   description = "The name of the resource group to create"

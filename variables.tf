@@ -3,7 +3,7 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "name" {
+variable "bastion_name" {
   description = "Name of Azure Bastion"
   type        = string
 }
