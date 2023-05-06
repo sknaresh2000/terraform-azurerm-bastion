@@ -17,7 +17,7 @@ resource "azurerm_public_ip" "bastion-pip" {
 }
 
 resource "azurerm_bastion_host" "bastion" {
-  name                = var.bastion_name
+  name                = var.name
   location            = var.location
   resource_group_name = var.resource_group_name
   sku                 = var.bastion_sku
