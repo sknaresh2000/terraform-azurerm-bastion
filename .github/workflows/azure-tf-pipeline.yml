@@ -21,5 +21,6 @@ jobs:
     uses: sknaresh2000/templates/.github/workflows/tf-ci.yml@main
     secrets: inherit
   bastion_deploy:
+    needs: bastion_build
     uses: sknaresh2000/templates/.github/workflows/tf-cd.yml@main
     secrets: inherit
