@@ -19,7 +19,6 @@ module "bastion" {
   ip_config_name        = var.ip_config_name
   pip_name              = var.pip_name
   nsg_name              = var.nsg_name
-  bastion_subnet_id     = module.subnet.id
 }
 
 module "virtual_network" {
