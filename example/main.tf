@@ -10,6 +10,9 @@ module "tags" {
 }
 
 module "bastion" {
+  depends_on = [
+    module.virtual_network
+  ]
   source                = "../"
   name                  = var.bastion_name
   tags                  = module.tags.tags
